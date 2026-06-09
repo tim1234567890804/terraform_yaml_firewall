@@ -1,8 +1,0 @@
-blocked_domains:
-  - badsite.com
-  - .badsite.com
-  - malware.test
-
-allowed_domains:
-  - amazonaws.com
-  - github.com
