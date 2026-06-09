@@ -1,9 +1,9 @@
 module "network_firewall" {
-  source = "../../../../modules/vpc"
+  source = "../../../../modules/vpc" #This path doesnt exist.
 
-  name = "core-firewall"
+  name = "core-firewall" #Poor description.
 
-  vpc_id = module.vpc.vpc_id
+  vpc_id = module.vpc.vpc_id #Module lookups will not function outside of single terraform run (should be data call).
 
   subnet_mapping = [
     for subnet in module.vpc.public_subnet_ids : {
